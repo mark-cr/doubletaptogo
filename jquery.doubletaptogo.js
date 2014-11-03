@@ -5,7 +5,7 @@
 
 ;(function($, window, document, undefined) {
 	$.fn.doubleTapToGo = function(options) {
-		var enabled   = ( typeof options === 'object' && options.disable === true )? false: true;
+		var enabled = ! ( typeof options === 'object' && options.disable === true );
 
 		if (!('ontouchstart' in window) &&
 			!navigator.msMaxTouchPoints &&
